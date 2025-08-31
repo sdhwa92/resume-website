@@ -1,7 +1,4 @@
-import "./style.css";
 import { careers } from "./career.json";
-
-console.log(careers);
 
 document.querySelector("#career").innerHTML = `
   ${careers
