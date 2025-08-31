@@ -1,21 +1,39 @@
 import "./style.css";
+import { careers } from "./career.json";
 
-// document.querySelector("#app").innerHTML = `
-//   <div>
-//     <a href="https://vite.dev" target="_blank">
-//       <img src="${viteLogo}" class="logo" alt="Vite logo" />
-//     </a>
-//     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-//       <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-//     </a>
-//     <h1>Hello Vite!</h1>
-//     <div class="card">
-//       <button id="counter" type="button"></button>
-//     </div>
-//     <p class="read-the-docs">
-//       Click on the Vite logo to learn more
-//     </p>
-//   </div>
-// `;
+console.log(careers);
 
-// setupCounter(document.querySelector("#counter"));
+document.querySelector("#career").innerHTML = `
+  ${careers
+    .map(
+      (career) => `
+    <div class="card">
+      <div class="career__container">
+        <div class="career__heading">
+          <div>
+            <h2 class="company-name">${career.company}</h2>
+            <p class="company-role">${career.role}</p>
+          </div>
+          <div class="career__date-range">
+            <p class="career__date-start">${career.startDate}</p>
+            <span>-</span>
+            <p class="career__date-end">${career.endDate}</p>
+          </div>
+        </div>
+        <div class="career__description">
+          <ul>
+            ${career.description
+              .map(
+                (description) => `
+              <li>${description}</li>
+            `
+              )
+              .join("")}
+          </ul>
+        </div>
+      </div>
+    </div>
+  `
+    )
+    .join("")}
+`;

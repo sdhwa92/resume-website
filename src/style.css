@@ -11,6 +11,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  --black: #000000;
+  --dark-grey: #1d1d1d;
+  --light-grey: #8f8f8f;
   --border-radius: 1.25rem;
   --gap: 1.5rem;
 }
@@ -54,7 +57,7 @@ p {
 }
 
 .card {
-  background-color: #1d1d1d;
+  background-color: var(--dark-grey);
   border-radius: var(--border-radius);
   padding: 1rem 1.5rem;
 }
@@ -72,7 +75,7 @@ p {
 }
 
 .vertical-divider {
-  border-right: 1px solid #8f8f8f;
+  border-right: 1px solid var(--light-grey);
   height: 100%;
   margin: 0 1rem;
 }
@@ -197,4 +200,65 @@ button:focus-visible {
 
 .profile-information-container p {
   font-style: italic;
+}
+
+.career-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+
+  @media (max-width: 768px) {
+    .career-section {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.career__container {
+  .career__heading {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--gap);
+
+    border-bottom: 1px solid var(--light-grey);
+    padding-bottom: 1rem;
+
+    .company-name {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .company-role {
+      color: var(--light-grey);
+    }
+
+    .career__date-range {
+      height: fit-content;
+
+      background-color: var(--black);
+      padding: 1rem;
+      border-radius: 0.5rem;
+
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+
+      p,
+      span {
+        margin: 0;
+        font-size: 0.75rem;
+        color: var(--light-grey);
+      }
+    }
+  }
+
+  .career__description {
+    ul {
+      list-style-type: disc;
+      padding-left: 1rem;
+
+      li {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
 }
