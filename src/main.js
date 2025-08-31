@@ -8,7 +8,9 @@ document.querySelector("#career").innerHTML = `
       <div class="career__container">
         <div class="career__heading">
           <div>
-            <h2 class="company-name">${career.company}</h2>
+            <h2 class="company-name"><a href="${
+              career.metadata.website
+            }" target="_blank">${career.company}</a></h2>
             <p class="company-role">${career.role}</p>
           </div>
           <div class="career__date-range">

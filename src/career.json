@@ -14,7 +14,10 @@
         "Developing reusable React UI component libraries to maintain consistent styling across various micro-frontend applications",
         "Building efficient and high-performance APIs with the FastAPI framework in Python",
         "Collaborating in an Agile environment with cross-functional teams to deliver high-quality software solutions"
-      ]
+      ],
+      "metadata": {
+        "website": "https://www.originenergy.com.au/"
+      }
     },
     {
       "company": "Felix",
@@ -31,7 +34,10 @@
         "Building Micro Frontend architecture - Webpack",
         "Utilising AWS Services (S3, CloudFront, EC2, API Gateway, etc.)",
         "Working in an Agile environment"
-      ]
+      ],
+      "metadata": {
+        "website": "https://www.felix.net/"
+      }
     },
     {
       "company": "Digital Dealer",
@@ -47,7 +53,10 @@
         "Managing code in the Bitbucket environment",
         "Deploying code changes via AWS - CI/CD",
         "Working in an Agile environment"
-      ]
+      ],
+      "metadata": {
+        "website": "https://digitaldealer.com.au/"
+      }
     },
     {
       "company": "Dealer Solutions",
@@ -66,7 +75,10 @@
         "Working in an Agile environment",
         "Using Docker to run a development environment",
         "Estimating task sizes for planning sprints"
-      ]
+      ],
+      "metadata": {
+        "website": "https://indiqator.com.au/"
+      }
     },
     {
       "company": "Dealer Solutions",
@@ -82,7 +94,10 @@
         "Using Docker to run a development environment",
         "Estimating task sizes for planning sprints",
         "Working in an Agile environment"
-      ]
+      ],
+      "metadata": {
+        "website": "https://indiqator.com.au/"
+      }
     },
     {
       "company": "Computit",
@@ -96,7 +111,10 @@
         "Writing manual documents for websites or applications",
         "Analysing databases and designing ERD",
         "Using Git for versioning"
-      ]
+      ],
+      "metadata": {
+        "website": "https://computit.com.au/"
+      }
     }
   ]
 }

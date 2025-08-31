@@ -11,9 +11,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  --white: #ffffff;
   --black: #000000;
   --dark-grey: #1d1d1d;
-  --light-grey: #8f8f8f;
+  --light-grey: #d1d1d1;
+  --hover-grey: #606060;
+  --grey-text: #a0a0a0;
   --border-radius: 1.25rem;
   --gap: 1.5rem;
 }
@@ -75,7 +78,7 @@ p {
 }
 
 .vertical-divider {
-  border-right: 1px solid var(--light-grey);
+  border-right: 1px solid var(--grey-text);
   height: 100%;
   margin: 0 1rem;
 }
@@ -226,9 +229,18 @@ button:focus-visible {
     .company-name {
       font-size: 1.5rem;
       margin-bottom: 0.5rem;
+
+      a {
+        text-decoration: none;
+        color: var(--white);
+
+        &:hover {
+          color: var(--light-grey);
+        }
+      }
     }
     .company-role {
-      color: var(--light-grey);
+      color: var(--grey-text);
     }
 
     .career__date-range {
@@ -246,7 +258,7 @@ button:focus-visible {
       span {
         margin: 0;
         font-size: 0.75rem;
-        color: var(--light-grey);
+        color: var(--grey-text);
       }
     }
   }
