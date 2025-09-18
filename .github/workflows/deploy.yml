@@ -4,8 +4,9 @@ on:
   push:
     branches:
       - main # Or your default branch
+  workflow_dispatch: # For manual trigger
 
-# GitHub Pages 배포를 위한 권한 설정
+# GitHub Pages deployment permissions
 permissions:
   contents: read
   pages: write
