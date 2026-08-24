@@ -1,0 +1,30 @@
+## Build results
+bin/
+obj/
+
+## IDE/user files
+.vs/
+.idea/
+*.user
+*.suo
+
+## Test results
+TestResults/
+*.trx
+
+## Publish output
+publish/
+*.Publish.xml
+
+## Local databases (SQLite)
+*.db
+*.db-shm
+*.db-wal
+
+## Local secrets/config overrides
+appsettings.*.local.json
+secrets.json
+
+## OS files
+.DS_Store
+Thumbs.db
