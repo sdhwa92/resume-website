@@ -1,4 +1,5 @@
 using ResumeSite.Api.Data;
+using ResumeSite.Api.Endpoints;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,7 +7,7 @@ builder.AddResumeSiteDb();
 
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
+app.MapSkillsEndpoints();
 
 app.MigrateDb();
 
