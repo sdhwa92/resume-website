@@ -59,9 +59,6 @@ public static class SkillsEndpoints
       return Results.CreatedAtRoute(GetSkillEndpointName, new SkillDto(skill.Id, skill.Name));
     });
 
-
-    // PUT /skills/{id}
-
     // DELETE /skills/{id}
     group.MapDelete("/{id}", async (int id, ResumeSiteContext dbContext) =>
     {

@@ -20,11 +20,9 @@ public class Experience
 
   public string? Location { get; set; }
 
-  public string? EmploymentType { get; set; }
+  public EmploymentType? EmploymentType { get; set; }
 
   public string? CompanyUrl { get; set; }
-
-  public int DisplayOrder { get; set; }
 
   public List<Skill> Skills { get; set; } = [];
 }

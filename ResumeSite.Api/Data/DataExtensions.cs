@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using ResumeSite.Api.Models;
 
 namespace ResumeSite.Api.Data;
 
@@ -22,6 +23,22 @@ public static class DataExtensions
     // 4. Makes it easier to manage transactions and ensure data consistency
     // 5. Reusing a DbContext instance can lead to increased memory usage
 
-    builder.Services.AddSqlite<ResumeSiteContext>(connString);
+    builder.Services.AddSqlite<ResumeSiteContext>(
+      connString,
+      optionsAction: options => options.UseSeeding((context, _) =>
+      {
+        if (!context.Set<Skill>().Any())
+        {
+          context.Set<Skill>().AddRange(
+            new Skill { Name = "HTML" },
+            new Skill { Name = "CSS" },
+            new Skill { Name = "JavaScript" },
+            new Skill { Name = "TypeScript" }
+          );
+
+          context.SaveChanges();
+        }
+      })
+    );
   }
 }
